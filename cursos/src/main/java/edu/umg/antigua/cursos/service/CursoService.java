@@ -13,8 +13,8 @@ public class CursoService {
     public List<Curso> buscarTodo(){
         return List<Curso> this.cursoRepository.findAll();
     }
-    public Curso registrar(Curso Curso){
-        return this.cursoRepository.save(Curso)
+    public Curso registrar(Curso curso){
+        return this.cursoRepository.save(curso)
     }
 
 }
