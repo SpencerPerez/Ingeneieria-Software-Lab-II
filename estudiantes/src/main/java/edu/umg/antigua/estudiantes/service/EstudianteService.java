@@ -11,7 +11,7 @@ public class EstudianteService {
     EstudianteRepository estudianteRepository;
 
     public List<Estudiante> buscarTodo(){
-        return (List<Estudiante> this.estudianteRepository.findAll())
+        return (List<Estudiante>) this.estudianteRepository.findAll();
     }
     public  Estudiante registrar(Estudiante estudiante){
         return this.estudianteRepository.save(estudiante);

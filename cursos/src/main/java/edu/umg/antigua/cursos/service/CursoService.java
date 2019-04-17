@@ -11,7 +11,7 @@ public class CursoService {
     CursoRepository cursoRepository;
 
     public List<Curso> buscarTodo(){
-        return List<Curso> this.cursoRepository.findAll();
+        return (List<Curso>) this.cursoRepository.findAll();
     }
     public Curso registrar(Curso curso){
         return this.cursoRepository.save(curso)
