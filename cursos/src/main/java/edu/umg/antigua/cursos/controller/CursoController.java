@@ -14,7 +14,7 @@ public class CursoController {
     private CursoService cursoService;
     @GetMapping("/buscarTodos")
     public List<Curso> buscarTodos(){
-        return this.cursoService.buscarTodo();
+        return this.cursoService.buscarTodos();
     }
     @PostMapping("/registrar")
     public  Curso registrar(@RequestBody(required = true) Curso newCurso){

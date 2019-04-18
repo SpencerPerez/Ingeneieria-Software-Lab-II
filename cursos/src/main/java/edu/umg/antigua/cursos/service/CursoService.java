@@ -12,10 +12,11 @@ public class CursoService {
     @Autowired
     CursoRepository cursoRepository;
 
-    public List<Curso> buscarTodo(){
-        return (List<Curso>) this.cursoRepository.findAll();
+    public List<Curso> buscarTodos(){
+        return(List<Curso>) this.cursoRepository.findAll();
     }
-    public Curso registrar(Curso curso){ return this.cursoRepository.save(curso);
+    public Curso registrar(Curso curso){
+        return this.cursoRepository.save(curso);
 
     }
 

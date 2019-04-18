@@ -1,23 +1,30 @@
 package edu.umg.antigua.cursos.models;
 
-public class Catedratico {
-    Long id;
-    String nombres;
-    String apellidos;
-    String codigo_catedratico;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
-    public Catedratico(Long id, String nombres, String apellidos, String codigo_catedratico) {
-        this.id = id;
+@Entity
+public class Catedratico {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
+    private String nombres;
+    private String apellidos;
+    private String codigo_catedratico;
+
+    public Catedratico(String nombres, String apellidos, String codigo_catedratico) {
         this.nombres = nombres;
         this.apellidos = apellidos;
         this.codigo_catedratico = codigo_catedratico;
     }
 
-    public Long getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(long id) {
         this.id = id;
     }
 

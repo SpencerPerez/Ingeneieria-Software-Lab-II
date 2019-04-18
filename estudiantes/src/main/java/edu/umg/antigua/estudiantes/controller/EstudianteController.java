@@ -14,7 +14,7 @@ public class EstudianteController {
     private EstudianteService estudianteService;
     @GetMapping("/buscarTodos")
     public List<Estudiante> buscarTodos(){
-        return this.estudianteService.buscarTodo();
+        return this.estudianteService.buscarTodos();
     }
     @PostMapping("/registrar")
     public Estudiante registrar(@RequestBody (required = true) Estudiante estudiante){

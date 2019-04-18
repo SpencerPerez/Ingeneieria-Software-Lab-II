@@ -8,16 +8,16 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/catedratico")
+@RequestMapping("/catedraticos")
 public class CatedraticoController {
     @Autowired
     private CatedraticoService catedraticoService;
-    @GetMapping ("/buscarTodos")
+    @GetMapping("/catedratico")
     public List<Catedratico> buscarTodos(){
-        return this.catedraticoService.buscarTodo();
+        return this.catedraticoService.buscarTodos();
     }
-    @PostMapping("/crear")
-    public Catedratico crear(@RequestBody(required = true) Catedratico newCatedratico){
-        return this.catedraticoService.registar(newCatedratico);
+    @PostMapping("/registrar")
+    public Catedratico registrar(@RequestBody(required = true)Catedratico catedratico){
+        return this.catedraticoService.registrar(catedratico);
     }
 }

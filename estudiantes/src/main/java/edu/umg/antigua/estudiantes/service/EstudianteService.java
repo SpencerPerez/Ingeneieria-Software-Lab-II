@@ -12,7 +12,7 @@ public class EstudianteService {
     @Autowired
     private EstudianteRepository estudianteRepository;
 
-    public List<Estudiante> buscarTodo(){
+    public List<Estudiante> buscarTodos(){
         return (List<Estudiante>) this.estudianteRepository.findAll();
     }
     public  Estudiante registrar(Estudiante estudiante){

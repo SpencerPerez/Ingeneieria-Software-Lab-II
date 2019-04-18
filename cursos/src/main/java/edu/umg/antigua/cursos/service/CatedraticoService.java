@@ -10,14 +10,11 @@ import java.util.List;
 @Service
 public class CatedraticoService {
     @Autowired
-    CatedraticoRepository catedraticoRepository;
-
-    public List<Catedratico> buscarTodo(){
-
-        return (List<Catedratico>)this.catedraticoRepository.findAll();
+    private CatedraticoRepository catedraticoRepository;
+    public List<Catedratico> buscarTodos(){
+        return (List<Catedratico>) this.catedraticoRepository.findAll();
     }
-    public Catedratico registar(Catedratico catedratico){
+    public Catedratico registrar(Catedratico catedratico){
         return this.catedraticoRepository.save(catedratico);
     }
-
 }
