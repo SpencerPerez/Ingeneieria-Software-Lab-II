@@ -10,7 +10,7 @@ import java.util.List;
 @Service
 public class EstudianteService {
     @Autowired
-    EstudianteRepository estudianteRepository;
+    private EstudianteRepository estudianteRepository;
 
     public List<Estudiante> buscarTodo(){
         return (List<Estudiante>) this.estudianteRepository.findAll();

@@ -10,13 +10,13 @@ import java.util.Date;
 public class Estudiante {
     @Id
     long id;
-    String nombre_completo;
-    String numero_carne;
-    Date fecha_nacimiento;
-    String telefono;
-    String direccion;
-    String correo;
-    String dpi;
+    private String nombre_completo;
+    private String numero_carne;
+    private Date fecha_nacimiento;
+    private String telefono;
+    private String direccion;
+    private String correo;
+    private String dpi;
 
     public Estudiante(long id, String nombre_completo, String numero_carne, Date fecha_nacimiento, String telefono, String direccion, String correo, String dpi) {
         this.id = id;

@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/Curso")
+@RequestMapping("/cursos")
 public class CursoController {
     @Autowired
     private CursoService cursoService;
@@ -16,9 +16,8 @@ public class CursoController {
     public List<Curso> buscarTodos(){
         return this.cursoService.buscarTodo();
     }
-    @PostMapping("/crear")
-    public Curso crear(@RequestBody(required = true) Curso newCurso){
+    @PostMapping("/registrar")
+    public  Curso registrar(@RequestBody(required = true) Curso newCurso){
         return this.cursoService.registrar(newCurso);
-
     }
 }
